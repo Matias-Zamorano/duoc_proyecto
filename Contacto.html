@@ -2,74 +2,105 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <title>Contacto | RealtyEducation</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/conocimiento.png">
-    
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <title>Contacto | RealtyEducation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/conocimiento.png">
+
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Inicio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="Clases.html">Clases VR</a>
-                  <a class="nav-link" href="Contacto.html">Contacto</a>
-                  <a class="nav-link" href="Sobre_Nosotros.html">Sobre Nosotros</a>      
-                </div>
-              </div>
-            </div>
-          </nav>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="Clases.html">Clases VR</a>
+            <a class="nav-link" href="Contacto.html">Contacto</a>
+            <a class="nav-link" href="Sobre_Nosotros.html">Sobre Nosotros</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-        <h1>Contacto</h1>
-    </header>
-    <main>
-        <h3>Por favor complete el siguiente formulario para contactarnos.
-            Si no hay incovenientes o otras actividades,
-            responderemos de inmediato al mensaje que envíe.
-        </h3>
-        <form action="">
-            <fieldset>
-                <legend>Ingrese sus datos </legend>
-                <div>
-                    <label for="nombre-txt">Nombre y apellido  :</label>
-                    <input required type="text" placeholder="Nombre y apellido" id="nombre-txt">
-                </div>
+    <h1>Contacto</h1>
+  </header>
+  <main class="ps-2">
 
-                <div  >
-                    <label   for="correo-txt"> Correo electronico : </label>
-                    <input required type="email" placeholder="Ingrese correo" id="correo-txt">
-                </div>
-
-                <div>
-                    <label for="mensaje-txt">Mensaje:</label>
-                    <textarea required id="mensaje-txt" cols="50" rows="7"></textarea>
-                </div>
-
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
-            </fieldset>
-        </form>
+    <div class="row">
+      <div class="col col-md col-lg pt-2 ps-2 ">
+        <div class="card">
+          <div class="card-header bg-warning text-center">
+            <span></span>
+          </div>
+          <div class="card-body">
+            <h5>Por favor complete el siguiente formulario para contactarnos.
+              Si no hay incovenientes o otras actividades,
+              responderemos de inmediato al mensaje que envíe.</h5>
+            <h5>Ingrese sus datos</h5>
 
 
 
-    </main>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <footer>
+    <form>
 
-    </footer>
+      <div>
+        <label for="nombre-txt" class="form-label">Nombre y apellido</label>
+        <input required type="text" cols="30" class="form-control" id="nombre-txt">
+      </div>
+
+      <div>
+        <label for="Correo" class="form-label">Correo Electronico</label>
+        <input required type="email" class="form-control" id="Correo">
+      </div>
+
+      <div>
+        <label for="Contraseña" class="form-label">Contraseña</label>
+        <input required type="password" class="form-control" id="Contraseña">
+      </div>
+
+      <div>
+        <label for="mensaje-txt" class="form-label">Escribe un mensaje</label>
+        <textarea required class="form-control" id="mensaje-txt" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+
+    </form>
+
+
+
+
+
+
+  </main>
+
+  <footer class=" text-white pt-2 pb-2 ps-2">
+    <h6>El texto está disponible bajo la Licencia Creative Commons Atribución Compartir Igual 3.0; pueden aplicarse
+      cláusulas adicionales.
+      Al usar este sitio, usted acepta nuestros términos de uso y nuestra política de privacidad.
+      RealtyEducation® es una marca registrada de la Fundación RealtyEducation, Inc., una organización sin ánimo de
+      lucro.</h3>
+
+      <h6>Política de privacidad Acerca de RealtyEducation Limitación de responsabilidad Versión para móviles
+        Desarrolladores EstadísticasDeclaración de cookies</h6>
+
+  </footer>
 </body>
 
 </html>
