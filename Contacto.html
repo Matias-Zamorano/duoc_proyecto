@@ -1,106 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <title>Contacto | RealtyEducation</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/conocimiento.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Contacto | RealtyEducation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/conocimiento.png">
 
-</head>
+  </head>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Inicio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="Clases.html">Clases VR</a>
-            <a class="nav-link" href="Contacto.html">Contacto</a>
-            <a class="nav-link" href="Sobre_Nosotros.html">Sobre Nosotros</a>
-          </div>
+  <body>
+    <header>
+              <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">Inicio</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="Clases.html">Clases VR</a>
+                      <a class="nav-link" href="Contacto.html">Contacto</a>
+                      <a class="nav-link" href="Sobre_Nosotros.html">Sobre Nosotros</a>
+                    </div>
+                  </div>
+                </div>
+              </nav> 
+              <h1>Registro</h1>       
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col col-md col-lg pt-2 ps-2 ">
+            <div class="card">
+              <div class="card-header bg-warning text-center"></div>
+              <div class="card-body">
+                  <h5>Por favor complete el siguiente formulario para contactarnos.
+                  Si no hay incovenientes o otras actividades,
+                  responderemos de inmediato al mensaje que envíe.</h5>
+                  <h5>Ingrese sus datos</h5>
+              </div>
+            </div>
         </div>
       </div>
-    </nav>
 
-    <h1>Contacto</h1>
-  </header>
-  <main class="ps-2">
+      <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 pt-2">
+                
+              <div class="card">
+                    <div class="card-header bg-warning text-center">
+                        <span>Registro</span>
+                    </div>
+                    
+                    
+                    <div class="card-body">
+                      <form id="registro-form">
+                            <!--NOMBRE DE LA PERSONA-->
+                            <div class="mb-3 has-validation"> <!--has validation es para validar al ingresar el nombre no quede en 0-->
+                                <label for="nombre-txt" class="form-label">Nombre y apellido</label> <!--EL FOR DEBE TENER EL MISMO NOMBRE QUE EL ID , PARA QUE SE VINCULEN DE MANERA CORRECTA-->
+                                <input type="text" id="nombre-txt" class="form-control "> <!-- form control sirve para que tome el tamaño que le dan  --> 
+                                <div class="invalid-feedback">Por favor ingrese Nombre y Apellido</div> <!--MENSAJE QUE APARECE CUANDO LA PERSONA NO INGRESA DATOS-->
+                            </div>
 
-    <div class="row">
-      <div class="col col-md col-lg pt-2 ps-2 ">
-        <div class="card">
-          <div class="card-header bg-warning text-center">
-            <span></span>
-          </div>
-          <div class="card-body">
-            <h5>Por favor complete el siguiente formulario para contactarnos.
-              Si no hay incovenientes o otras actividades,
-              responderemos de inmediato al mensaje que envíe.</h5>
-            <h5>Ingrese sus datos</h5>
+                            <!--CORREO DE LA PERSONA -->
+                            <div class="mb-3 has validation">
+                              <label for="correo-txt" class="form-label">Correo Electronico</label>
+                              <input required type="email" class="form-control" id="correo-txt">
+                              <div class="invalid-feedback">Por favor ingrese un correo valido</div>
+                            </div>
 
+                            <!--MENSAJE QUE DIRA LA PERSONA-->
+                            <div class="mb-3 has-validation">
+                              <label for="mensaje-txt" class="form-label">Escribe un mensaje</label>
+                              <textarea required class="form-control" rows="3" id="mensaje-txt"></textarea>
+                              <div class="invalid-feedback">Por favor ingrese su mensaje de manera correcta</div>
+                            </div>
 
+                            <!--BOTON  TIPOS DE DUDA QUE TENGA EL USUARIO Y QEU  SALGA HACIA ABAJO POR EL ORDEN DE LOS NUMEROS-->
+                            <div class="mb-3"> 
+                                <label for="tipo-select" class="form-label">Tipo de consulta</label>
+                                <select name="form-select" id="tipo-select">
+                                  <option value="0">                       </option>
+                                  <option value="1">Manual de ayuda        </option>   <!--|<i class="far fa-address-book"></i>|-->
+                                  <option value="2">Actualizacion de cuenta</option>   <!--|<i class="fas fa-user-edit"></i>|-->
+                                  <option value="3">Recuperacion  de cuenta</option>   <!--|<i class="fas fa-user-cog"></i>|-->
+                                  <option value="4">Eleminar usuario       </option>   <!--|<i class="fas fa-user-alt-slash"></i>|-->
+                                </select>
+                            </div>
 
-          </div>
+                                <!-- BOTON TANTO PARA REGISTAR LOS REGISTROS Y LIMPIAR EL REGISTRO DE LA TABLA IZQUIERDA-->
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-6">
+                                    <button type="submit" class="btn btn-success" >Registrar</button>
+                                    </div>
+                                    <div class="col text-end">
+                                    <button type="button" id="limpiar-btn" class="btn btn-info">Limpiar</button>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md col pt-2">
+                <div class="card">
+                    <div class="card-header bg-warning ">
+                        <span>Tabla de registro</span>
+                    </div>
+                    <div class="car-body">
+                        <Table class="table table-hover table-bordered table-stripped">
+                            <thead>
+                                <tr>
+                                    <th>nro</th>
+                                    <th>Nombre</th>
+                                    <th>Tipo</th>
+                                    <th>mensaje</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-registro"></tbody>
+                        </Table>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    
+    </main>
 
-    <form style="width: 25rem;">
+              <footer class=" text-white pt-5 pb-2 ps-1">
+                <h6>El texto está disponible bajo la Licencia Creative Commons Atribución Compartir Igual 3.0; pueden aplicarse
+                    cláusulas adicionales.
+                    Al usar este sitio, usted acepta nuestros términos de uso y nuestra política de privacidad.
+                    RealtyEducation® es una marca registrada de la Fundación RealtyEducation, Inc., una organización sin ánimo de
+                    lucro.</h3>
 
-      <div>
-        <label for="nombre-txt" class="form-label">Nombre y apellido</label>
-        <input required type="text" cols="30" class="form-control" id="nombre-txt">
-      </div>
-
-      <div>
-        <label for="Correo" class="form-label">Correo Electronico</label>
-        <input required type="email" class="form-control" id="Correo">
-      </div>
-
-      <div>
-        <label for="Contraseña" class="form-label">Contraseña</label>
-        <input required type="password" class="form-control" id="Contraseña">
-      </div>
-
-      <div>
-        <label for="mensaje-txt" class="form-label">Escribe un mensaje</label>
-        <textarea required class="form-control" id="mensaje-txt" rows="3"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Enviar</button>
-
-    </form>
+                    <h6>Política de privacidad Acerca de RealtyEducation Limitación de responsabilidad Versión para móviles
+                    Desarrolladores EstadísticasDeclaración de cookies</h6>
+              </footer>
 
 
 
 
 
 
-  </main>
 
-  <footer class=" text-white pt-5 pb-2 ps-1">
-    <h6>El texto está disponible bajo la Licencia Creative Commons Atribución Compartir Igual 3.0; pueden aplicarse
-      cláusulas adicionales.
-      Al usar este sitio, usted acepta nuestros términos de uso y nuestra política de privacidad.
-      RealtyEducation® es una marca registrada de la Fundación RealtyEducation, Inc., una organización sin ánimo de
-      lucro.</h3>
 
-      <h6>Política de privacidad Acerca de RealtyEducation Limitación de responsabilidad Versión para móviles
-        Desarrolladores EstadísticasDeclaración de cookies</h6>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="vendor/tinymce/js/tinymce/tinymce.min.js" ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/index.js"></script>
+    <!--SIEMPRE LO MIO AL FINAL-->
 
-  </footer>
-</body>
+  </body>
 
+
+  
 </html>
