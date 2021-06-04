@@ -120,24 +120,24 @@ tinymce.init({
   document.querySelector("#registro-form").addEventListener('submit',(e)=>{
    e.preventDefault();//Previene que el formulario recargue la pagina
 
-  let nombre=document.querySelector("#Nombre-id").value;//LET para definir para una variable
-  let correo=document.querySelector("#Correo-txt").value;
+  let nombre= document.querySelector("#nombre-txt").value;//LET para definir para una variable
+  let correo= document.querySelector("#correo-txt").value;
   let mensaje=tinymce.get("mensaje-txt").getContent();
-  let tipo= document.querySelector("#tipo-select").value;
+  let tipo=   document.querySelector("#tipo-select").value;
 
 // si es valido sera correcto y en el caso que no lo es sera :
  let esValido= true;
- document.querySelector("#Nombre-id").classList.remove("is-invalid");
- document.querySelector("#Correo-txt").classList.remove("is-invalid");
+ document.querySelector("#nombre-txt").classList.remove("is-invalid");
+ document.querySelector("#correo-txt").classList.remove("is-invalid");
  document.querySelector("#mensaje-txt").classList.remove("is-invalid");
 
  if(nombre.trim()==""){ // el trim te borra los espacios que haya escrito la persona para ajustarlo bien
-     document.querySelector("#Nombre-id").classList.add("is-invalid");
+     document.querySelector("#nombre-txt").classList.add("is-invalid");
      esValido = false;
  }
 
  if(correo.trim()==""){
-     document.querySelector("#Correo-txt").classList.add("is-invalid");
+     document.querySelector("#correo-txt").classList.add("is-invalid");
      esValido = false;
 }
 
@@ -166,9 +166,9 @@ tinymce.init({
   //limpiar los elementos 
   document.querySelector("#limpiar-btn").addEventListener("click", ()=>{
   //limpiar el nombre 
-  document.querySelector("#Nombre-id").value = "";
+  document.querySelector("#nombre-txt").value ="";
   //Limpiar el correo
-  document.querySelector("#Correo-txt").value ="";
+  document.querySelector("#correo-txt").value ="";
   //Limpiar un campo de mucha escritura
   tinymce.get("mensaje-txt").setContent(""); // NO COLOCAR # QUE NO SIRVE CON EL!!!
   //limpiar un select (tambien seleccionando la primera opcion)

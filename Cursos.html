@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <title>Cursos | RealtyEducation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/conocimiento.png">
   </head>
   <body>
     <header>
@@ -29,18 +31,166 @@
               </div>
             </div>
           </nav>
-
-
-
-
+            <h1>Clases online</h1>
+            <h2>Podras encontrar diferentes cursos y poder inscribirte en ellos </h2>
+          
     </header>
-    <!-- Optional JavaScript; choose one of the two! -->
+    <main class="container-fluid" >
 
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12 pt-2">
+            <div class="card">
+              
+              <div class="card-header bg-warning text-linght">
+                <span>Registrar Clases</span>
+              </div>
 
+                <div class="card-body">
+                  <form id="cursos-form">
+                    <div class="mb-3">
+                      <label for="nombreCurso-txt"class="form-label">Nombre y Apellido</label>
+                      <input type="text" id="nombreCurso-txt" class="form-control">
+                    </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+                    <div class="mb-3">
+                      <label for="correoCurso-txt" class="form-label">Ingrese su correo</label>
+                      <input type="text" id="correoCurso-txt" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="tipoCurso-select"></label>
+                      <select class="form-select" id="tipoCurso-select">
+                        <option value="1">Cursos de programación y robótica</option>
+                        <option value="2">Cursos sobre trastornos del lenguaje</option>
+                        <option value="3">Cursos de inglés online gratis</option>
+                        <option value="4">Cursos para aprender a dibujar cómic y manga</option>
+                        <option value="5">Cursos de doblaje y locución </option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <div class="row">
+                        
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-info">Registrar</button>
+                        </div>
+
+                        <div class="col text-end">
+                          <button type="button" class="btn btn-info ">Limpiar</button>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+
+            <div class="col-lg col-md col pt-2">
+              <div class="card">
+                <div class="card-header bg-warning text-linght">
+                  <span>Clases ya registradas</span>
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover table-bordered table-stripped">
+                    <thead>
+                      <tr>
+                        <th>Nro</th>
+                        <th>Nombre completo</th>
+                        <th>Correo</th>
+                        <th>Tipo de curso</th>
+                        <th>Acciones</th>
+                      </tr>
+
+                    </thead>
+                    <tbody id="tbody-curso" >
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--"1">Cursos de programación y robótica-->
+        <div class="card mb-3 "style="max-width: 1500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/Cursos-de-programacion-y-robotica.webp" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Cursos de programación y robótica</h5>
+                <p class="card-text">Para aprender robótica y programación es necesario llevar a cabo una formación especializada. Con estos cursos, los docentes interesados en estas materias pueden encontrar distintas opciones: desde niveles básicos para dar los primeros pasos en estas disciplinas a otros más avanzados..</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--"2">Cursos sobre trastornos del lenguaje-->
+        <div class="card mb-3"style="max-width: 1500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="img/Cursos-sobre-trastornos-del-lenguaje.webp" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Cursos sobre trastornos del lenguaje</h5>
+                <p class="card-text">Los docentes suelen ser los primeros en detectar que un alumno tiene dificultades a la hora de expresarse y, por ello, existe formación especializada en este tipo de trastornos que sirve de ayuda para trabajar y acompañar a los niños que lo padecen. Hemos seleccionado algunos de ellos. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--"3">Cursos de inglés online gratis-->
+        <div class="card mb-3"style="max-width: 1500px;">
+          <div class="row g-0">
+            <div class="col-md-4 ">
+              <img src="img/Cursos-de-inglés-online-gratis.webp" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Cursos de inglés online gratis</h5>
+                <p class="card-text">Tanto si se desea empezar el aprendizaje de una lengua como si se busca profundizar en ella, es esencial estudiarla de forma continua. Por ello, hemos elaborado una selección de cursos de inglés online, con los que es posible estudiar gramática y vocabulario, además de mejorar la comprensión oral, e, incluso, aprender a enseñar en este idioma. Y todo ello pudiendo elegir el nivel y hasta el tiempo de estudio por semana.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!--"4">Cursos para aprender a dibujar cómic y manga-->
+        <div class="card mb-3"style="max-width: 1500px;">
+          <div class="row g-0">
+            <div class="col-md-4 pt-2">
+              <img src="img/Cursos-para-aprender-a-dibujar-cómic-y-manga.webp" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Cursos para aprender a dibujar cómic y manga</h5>
+                <p class="card-text">Los cómics y novelas gráficas son cada día más populares entre los menores y adolescentes. Con historias e ilustraciones apasionantes, consiguen sumergir en mundos alternativos a todo aquel que los lee. Pero, ¿por qué conformarse únicamente con leerlos? Para todos aquellos que disfrutan de este género y que, además, les gusta la pintura, existen cursos especializados en el dibujo de cómics. A continuación, os dejamos algunos cursos para aprender a dibujar cómic y manga indicados para menores y disponibles en modalidad online o presencial.</p>
+                 </div>
+            </div>
+          </div>
+        </div>
+
+        <!--"5">Cursos de doblaje y locución-->
+        <div class="card mb-3"style="max-width: 1500px;">
+          <div class="row g-0">
+            <div class="col-md-4 pt-2">
+              <img src="img/Cursos-de-doblaje-y-locución-para-estudiantes.webp" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Cursos de doblaje y locución para estudiantes</h5>
+                <p class="card-text">Destinados a menores y adolescentes interesados en el mundo de la locución y la interpretación, estos cursos de doblaje y locución para estudiantes les enseñan a sacar el máximo partido a su voz a la vez que mejoran destrezas como la expresión oral o pierden el miedo a hablar en público. Además, permiten que los participantes no pongan límites a su imaginación y sirven como base para su formación futura. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
+   
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  
+    <script src="js/Cursos.js"></script>
 </body>
 </html>
