@@ -1,13 +1,55 @@
 const cursos = [];
+ const eliminar =async function(){
+
+    let Borrar = await Swal.fire({
+        title: 'desea eliminar este curso registrado? ',
+            icon:'question',
+            showCancelButton:true,
+            confirmButtonText:"Eliminar",
+            showClass: {
+              popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp'
+            }
+        
+    });
+    if(Borrar.isConfirmed){
+        let nro = this.nro;
+        cursos.splice(nro,1);
+        Swal.fire({
+            title: 'Operacion realizada correctamente',
+            icon:'success',
+            showClass: {
+              popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp'
+            }
+          })
+        cargarTabla();
+    }else{
+        Swal.fire({
+            title: 'Operacion cancelada ',
+            icon:'error',
+            showClass: {
+              popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp'
+            }
+          })
+    }
+  };
  //Definir un arreglo en javascript
-const cargarTabla = ()=>{
-    //1.Una referencia a la tabla
-    let tbody  = document.querySelector("#tbody-curso");
-    tbody.innerHTML=""; // hace que no se multiplique los registros
-    //2.Por cada registro generar una fila 
-    for(let i=0; i <  cursos.length; ++ i){
-        let c  = cursos[i];
-        console.log(c);
+    const cargarTabla = ()=>{
+        //1.Una referencia a la tabla
+        let tbody  = document.querySelector("#tbody-curso");
+        tbody.innerHTML=""; // hace que no se multiplique los registros
+        //2.Por cada registro generar una fila 
+        for(let i=0; i <  cursos.length; ++ i){
+            let c  = cursos[i];
+            
 
         //Crea un elemento qeu no existe, pero no lo agrega a la pagina
         //Puedo crear cualquier etiqueta html aqui
@@ -37,10 +79,19 @@ const cargarTabla = ()=>{
             icono.classList.add("fas","fa-microphone","text-primary","fa-2x");
         }
         tdTipo.innerText   = c.tipo;
-        tdTipo.appendChild(icono);
-        tdTipo.classList.add("text-center");
         
+        tdTipo.classList.add("text-center");
+        tdTipo.appendChild(icono);
+
         tdNro.innerText    = i + 1;
+
+        let boton = document.createElement("button");
+        boton.nro = i;
+        boton.addEventListener("click",eliminar);
+        boton.innerText= "Eliminar curso registrado";
+        boton.classList.add("btn","btn-danger");
+        tdAcciones.classList.add("text-center");
+        tdAcciones.appendChild(boton);
 
         tr.appendChild(tdNro);
         tr.appendChild(tdNombre);
@@ -78,5 +129,24 @@ document.querySelector("#cursos-form").addEventListener('submit', (e)=>{
           popup: 'animate__animated animate__fadeOutUp'
         }
       })
+
+        document.querySelector("#cursoLimpiar-btn").addEventListener("click",()=>{
+        //limpiar el nombre 
+        document.querySelector("#nombreCurso-txt").value ="";
+        //Limpiar el correo
+        document.querySelector("#correoCurso-txt").value ="";
+        //limpiar un select (tambien seleccionando la primera opcion)
+        document.querySelector("#tipoCurso-select").value="1";
+        }); 
+            
+        
+        //limpiar el nombre 
+        //document.querySelector("#nombreCurso-txt").value ="";
+        //Limpiar el correo
+        //document.querySelector("#correoCurso-txt").value ="";
+        //limpiar un select (tambien seleccionando la primera opcion)
+        //document.querySelector("#tipoCurso-select").value="1";
+    
+        
     
 });

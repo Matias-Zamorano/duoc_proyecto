@@ -23,10 +23,8 @@ tinymce.init({
           confirmButtonText:"Eliminar"
           
       });
-
       // La persona dijo que si ? , entonces que realice todo este proceso
       if(respuesta.isConfirmed){
-
           //1.Saber que boton fue el que se apreto
           //2.Sacar el nro del boton
           let nro = this.nro;
@@ -35,11 +33,10 @@ tinymce.init({
           Swal.fire("Solicitud eliminada correctamente");
           //4.Recargar la tabla 
           cargarTabla();
-  
       // y si la persona  dijo que no ? 
-      }else{
+        }else{
           Swal.fire("Operacion cancelada correctamente");
-      }
+        }
     };
 
      const cargarTabla=()=>{
@@ -49,6 +46,7 @@ tinymce.init({
 
       for(let i=0; i < registros.length; ++ i){
           let r = registros[i];
+          
 
           let tr=document.createElement           ("tr");
           let tdNro=document.createElement        ("td");
@@ -66,7 +64,7 @@ tinymce.init({
           //Si elige el 1  agregar el icono agua o :
           if(r.tipo == "1"){
               icono.classList.add("far","fa-address-book","text-info","fa-2x");//<i class="far fa-address-book"></i>
-              
+
           //En el caso de que eliga el 2 agregar el icono fuego 
           } else if (r.tipo == "2"){
               icono.classList.add("fas","fa-user-edit","text-warning","fa-2x");//<i class="fas fa-user-edit"></i>
@@ -79,6 +77,7 @@ tinymce.init({
           }else{
               icono.classList.add("fas","fa-user-alt-slash","text-danger","fa-2x");//<i class="fas fa-user-alt-slash"></i>
           }
+          tdTipo.innerText=r.tipo;
           tdTipo.classList.add("text-center");
           tdTipo.appendChild(icono);
        
@@ -112,24 +111,24 @@ tinymce.init({
       //4.Agregar esa fila a la tabla (manipulando el DM)
   };
 
-//document = es un hacer una referencia al ducumento web compledo.
-//query...=busca adentro de la pagina si existe tal id.
-//addevent...= es un funcion que ademas es  escuchador que si lo encuentra lo reproduzca.
-//listener es un escuchardor de un evento por ejemplo cuando la persona mande el formulario//
+    //document = es un hacer una referencia al ducumento web compledo.
+    //query...=busca adentro de la pagina si existe tal id.
+    //addevent...= es un funcion que ademas es  escuchador que si lo encuentra lo reproduzca.
+    //listener es un escuchardor de un evento por ejemplo cuando la persona mande el formulario//
 
   document.querySelector("#registro-form").addEventListener('submit',(e)=>{
-   e.preventDefault();//Previene que el formulario recargue la pagina
+    e.preventDefault();//Previene que el formulario recargue la pagina
 
-  let nombre= document.querySelector("#nombre-txt").value;//LET para definir para una variable
-  let correo= document.querySelector("#correo-txt").value;
-  let mensaje=tinymce.get("mensaje-txt").getContent();
-  let tipo=   document.querySelector("#tipo-select").value;
+    let nombre= document.querySelector("#nombre-txt").value;//LET para definir para una variable
+    let correo= document.querySelector("#correo-txt").value;
+    let mensaje=tinymce.get("mensaje-txt").getContent();
+    let tipo=   document.querySelector("#tipo-select").value;
 
-// si es valido sera correcto y en el caso que no lo es sera :
- let esValido= true;
- document.querySelector("#nombre-txt").classList.remove("is-invalid");
- document.querySelector("#correo-txt").classList.remove("is-invalid");
- document.querySelector("#mensaje-txt").classList.remove("is-invalid");
+    // si es valido sera correcto y en el caso que no lo es sera :
+    let esValido= true;
+    document.querySelector("#nombre-txt").classList.remove("is-invalid");
+    document.querySelector("#correo-txt").classList.remove("is-invalid");
+    document.querySelector("#mensaje-txt").classList.remove("is-invalid");
 
  if(nombre.trim()==""){ // el trim te borra los espacios que haya escrito la persona para ajustarlo bien
      document.querySelector("#nombre-txt").classList.add("is-invalid");
