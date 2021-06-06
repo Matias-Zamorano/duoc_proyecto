@@ -139,13 +139,6 @@ document.querySelector("#cursos-form").addEventListener('submit', (e)=>{
         document.querySelector("#tipoCurso-select").value="1";
         }); 
             
-        
-        //limpiar el nombre 
-        //document.querySelector("#nombreCurso-txt").value ="";
-        //Limpiar el correo
-        //document.querySelector("#correoCurso-txt").value ="";
-        //limpiar un select (tambien seleccionando la primera opcion)
-        //document.querySelector("#tipoCurso-select").value="1";
     
         
     
