@@ -47,19 +47,23 @@
 
                 <div class="card-body">
                   <form id="cursos-form">
-                    <div class="mb-3">
+                    
+                    <div class="mb-3  has-validation">
                       <label for="nombreCurso-txt"class="form-label">Nombre y Apellido</label>
                       <input type="text" id="nombreCurso-txt" class="form-control">
+                      <div class="invalid-feedback">Por favor ingrese Nombre y Apellido</div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3  has-validation">
                       <label for="correoCurso-txt" class="form-label">Ingrese su correo</label>
                       <input type="text" id="correoCurso-txt" class="form-control">
+                      <div class="invalid-feedback">Por favor ingrese un correo valido</div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3  has-validation">
                       <label for="tipoCurso-select" class="form-label">Tipo</label>
                       <select class="form-select" id="tipoCurso-select">
+                        <option value="0">...................</option>
                         <option value="1">Cursos de programación y robótica</option>
                         <option value="2">Cursos sobre trastornos del lenguaje</option>
                         <option value="3">Cursos de inglés online gratis</option>
@@ -100,11 +104,8 @@
                         <th>Tipo de curso</th>
                         <th>Acciones</th>
                       </tr>
-
                     </thead>
-                    <tbody id="tbody-curso" >
-
-                    </tbody>
+                    <tbody id="tbody-curso" ></tbody>
                   </table>
                 </div>
               </div>
