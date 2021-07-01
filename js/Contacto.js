@@ -162,7 +162,7 @@ document.querySelector("#registro-form").addEventListener('submit', (e)=>{
     cargarTabla();
 
     Swal.fire({
-        title: 'Curso registrado de manera correcta',
+        title: 'Su formulario se registro de manera correcta',
         text:'Le llegara un mensaje que le indicara toda la informacion sobre el curso y sus horarios',
         icon:'success',
         showClass: {
